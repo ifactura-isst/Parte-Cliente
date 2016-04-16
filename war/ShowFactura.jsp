@@ -54,7 +54,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        
                         <c:forEach items="${facturas}" var="facturasi">
                         	<tr>
                             	<td><c:out value="${facturasi.id}" /></td>
@@ -62,7 +61,7 @@
                             	<td><c:out value="${facturasi.apellidos}" /></td>
                             	<td><c:out value="${facturasi.tipo}" /></td>
                             	<td><c:out value="${facturasi.empresa}" /></td>
-                            	<td>De: 01/02/2016  A: 01/03/2016</td>
+                            	<td><c:out value="De: ${facturasi.startDate} a: ${facturasi.endDate}"/></td>
                             	<td><c:out value="${facturasi.importe}" />€</td>
                             	<td><c:out value="${facturasi.municipio}" /></td>
                             	<td><c:out value="${facturasi.provincia}" /></td>

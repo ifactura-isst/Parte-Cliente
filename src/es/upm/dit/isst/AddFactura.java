@@ -23,24 +23,30 @@ public class AddFactura extends HttpServlet {
 		UserService userService = UserServiceFactory.getUserService();
 		User user = userService.getCurrentUser();
 		
-		String nombre = req.getParameter("name");
-		String apellidos = req.getParameter("surname");
-		String municipio = req.getParameter("municipio");
-		String provincia = req.getParameter("provincia");
-		String empresa = req.getParameter("empresa");
-		//String startDate = req.getParameter("start_date");
-		//String endDate = req.getParameter("end_date");
-		String tipo = req.getParameter("tipoFactura");
-		Long importeTotal = Long.parseLong(req.getParameter("total"));
+		String nombre = checkNull(req.getParameter("name"));
+		String apellidos = checkNull(req.getParameter("surname"));
+		String municipio = checkNull(req.getParameter("municipio"));
+		String provincia = checkNull(req.getParameter("provincia"));
+		String empresa = checkNull(req.getParameter("empresa"));
+		String startDate = checkNull(req.getParameter("start_date"));
+		String endDate = checkNull(req.getParameter("end_date"));
+		String tipo = checkNull(req.getParameter("tipoFactura"));
+		String importe = checkNull(req.getParameter("total"));
 		
-		if (nombre == "" | apellidos == "" | municipio == "" | provincia == "" 
-				| empresa == "" | tipo == "" | importeTotal.equals(null)) {
+		if ((nombre == "" | apellidos == "" | municipio == "" | provincia == "" 
+				| empresa == "" | startDate == "" | endDate == "" | tipo == "" | importe == "") || (user == null)) {
 			//alert("Campos vacíos");
 			resp.sendRedirect("/");
+			
 		}else {
+			Double importeTotal = Double.parseDouble(importe);
+
 			FacturasDAO dao = FacturasDAOImpl.getInstance();
-			dao.add(nombre, apellidos, tipo, empresa, importeTotal, municipio, provincia, user);
-		
+			dao.add(nombre, apellidos, tipo, empresa, startDate, endDate, importeTotal, municipio, provincia, user);
+			System.out.println("->Añadida factura de tipo "+tipo+" de "+nombre+" "+apellidos
+					+". Provincia y municipio: "+provincia+ " "+municipio
+					+". Empresa: "+empresa+ " con fecha de facturación: "+startDate+"-"+endDate
+					+". Importe total: "+importe+"€");
 			resp.sendRedirect("/showFactura");
 		}
 	}

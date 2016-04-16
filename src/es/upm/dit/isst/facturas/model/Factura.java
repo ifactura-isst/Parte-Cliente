@@ -15,15 +15,15 @@ public class Factura implements Serializable {
 	
 	//TODO Generar los Id's de manera incremental, no aleatorios
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Long id;
 	private String nombre;
 	private String apellidos;
 	private String tipo;
 	private String empresa;
-	//private String startDate;
-	//private String endDate;
-	private Long importe;
+	private String startDate;
+	private String endDate;
+	private Double importe;
 	private String municipio;
 	private String provincia;
 	private User user;
@@ -31,12 +31,14 @@ public class Factura implements Serializable {
 	/**
 	 * Constructor
 	 */
-	public Factura(String nombre, String apellidos, String tipo, String empresa,
-			Long importe, String municipio, String provincia, User user) {
+	public Factura(String nombre, String apellidos, String tipo, String empresa, String startDate, String endDate,
+			Double importe, String municipio, String provincia, User user) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.tipo = tipo;
 		this.empresa = empresa;
+		this.startDate = startDate;
+		this.endDate = endDate;
 		this.importe = importe;
 		this.municipio = municipio;
 		this.provincia = provincia;
@@ -74,7 +76,7 @@ public class Factura implements Serializable {
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
-	/*public String getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 	public void setStartDate(String startDate) {
@@ -85,11 +87,11 @@ public class Factura implements Serializable {
 	}
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
-	}*/
-	public Long getImporte() {
+	}
+	public Double getImporte() {
 		return importe;
 	}
-	public void setImporte(Long importe) {
+	public void setImporte(Double importe) {
 		this.importe = importe;
 	}
 	public String getMunicipio() {
@@ -109,7 +111,7 @@ public class Factura implements Serializable {
 	@Override
 	public String toString() {
 		return "Factura [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", tipo=" + tipo + ", empresa="
-				+ empresa + ", importe=" + importe
+				+ empresa + ", startDate=" + startDate + ", endDate=" + endDate + ", importe=" + importe
 				+ ", municipio=" + municipio + ", provincia=" + provincia + "]";
 	}
 	

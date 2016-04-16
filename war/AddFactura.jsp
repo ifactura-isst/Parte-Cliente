@@ -54,21 +54,21 @@
                                         <input type="email" name="correo" id="correo" placeholder="Correo electrónico">
                                     </label></p> -->
                                     <p><label for="provincia">Provincia
-                                        <select name="provincia" id="provincia" required>
-                                            <option value="alava">Álava</option>
-                                            <option value="albacete">Albacete</option>
-                                            <option value="alicante">Alicante</option>
-                                            <option value="almeria">Almería</option>
-                                            <option value="asturias">Asturias</option>
-                                            <option value="avila">Ávila</option>
-                                            <option value="badajoz">Badajoz</option>
-                                            <option value="barcelona">Barcelona</option>
-                                            <option value="burgos">Burgos</option>
-                                            <option value="caceres">Cáceres</option>
-                                            <option value="cadiz">Cádiz</option>
-                                            <option value="cantabria">Cantabria</option>
-                                            <option value="toledo">Toledo</option>
-                                            <option value="madrid">Madrid</option>
+                                        <select type="text "name="provincia" id="provincia" required>
+                                            <option value="Álava">Álava</option>
+                                            <option value="Albacete">Albacete</option>
+                                            <option value="Alicante">Alicante</option>
+                                            <option value="Almería">Almería</option>
+                                            <option value="Asturias">Asturias</option>
+                                            <option value="Ávila">Ávila</option>
+                                            <option value="Badajoz">Badajoz</option>
+                                            <option value="Barcelona">Barcelona</option>
+                                            <option value="Burgos">Burgos</option>
+                                            <option value="Cáceres">Cáceres</option>
+                                            <option value="Cádiz">Cádiz</option>
+                                            <option value="Cantabria">Cantabria</option>
+                                            <option value="Toledo">Toledo</option>
+                                            <option value="Madrid">Madrid</option>
                                         </select>
                                     </label></p>
 
@@ -76,32 +76,30 @@
                                     <input type="text" name="empresa" id="empresa" required placeholder="Empresa proveedora">
                                 </label></p>
 
-                            <!-- <fieldset id="datos_factura">
-                                <legend>Periodo de facturación</legend>
-                                <p><label for="start_date">
-                                    <span>De
+                            <fieldset id="datos_factura">
+                                <label for="start_date">Periodo de facturación
+                                    <p><span>De:
                                         <input type="date" name="start_date" id="start_date" required placeholder="dd/mm/aaaa">
                                     </span>
-                                    <span>a
+                                    <span>Hasta:
                                         <input type="date" name="end_date" id="end_date" required placeholder="dd/mm/aaaa">
-                                    </span>
-                                </label></p>
-                            </fieldset> -->
+                                    </span></p>
+                                </label>
+                            </fieldset>
 
                             <fieldset id="tipo factura">
-                                    <legend>Tipo de factura</legend>
-                                    <p><label for="tipoFactura">
-                                        <select name="tipoFactura" id="tipoFactura" required>
+                                    <p><label for="tipoFactura">Tipo de factura
+                                        <select type="text" name="tipoFactura" id="tipoFactura" required>
                                             <option value="luz">Luz</option>
                                             <option value="agua">Agua</option>
                                             <option value="gas">Gas</option>
+                                            <option value="teléfono">Teléfono</option>
                                         </select>
                                     </label></p>
                             </fieldset>
 
                             <fieldset id="resumen_factura">
-                                <legend>Importe</legend>
-                                <p><label for="total">
+                                <p><label for="total">Importe
                                     <input type="text" name="total" id="total" size="35" required placeholder="Introduzca el importe total"><span>€</span>
                                 </label></p>
                             </fieldset>

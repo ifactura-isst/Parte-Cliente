@@ -23,10 +23,10 @@ public class FacturasDAOImpl implements FacturasDAO {
 	}
 
 	@Override
-	public Factura add(String nombre, String apellidos, String tipo, String empresa,
-			Long importe, String municipio, String provincia, User user) {
+	public Factura add(String nombre, String apellidos, String tipo, String empresa, String startDate, String endDate,
+			Double importe, String municipio, String provincia, User user) {
 		EntityManager em = EMFService.get().createEntityManager();
-		Factura factura = new Factura(nombre, apellidos, tipo, empresa, importe, municipio, provincia, user);
+		Factura factura = new Factura(nombre, apellidos, tipo, empresa, startDate, endDate, importe, municipio, provincia, user);
 		em.persist(factura);
 		em.close();
 		return factura;
