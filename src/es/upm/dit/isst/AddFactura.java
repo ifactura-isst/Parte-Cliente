@@ -2,6 +2,9 @@ package es.upm.dit.isst;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,6 +39,11 @@ public class AddFactura extends HttpServlet {
 		if ((nombre == "" | apellidos == "" | municipio == "" | provincia == "" 
 				| empresa == "" | startDate == "" | endDate == "" | tipo == "" | importe == "") || (user == null)) {
 			//alert("Campos vacíos");
+			System.out.println("Campos vacíos. Rellenar todo");
+			resp.sendRedirect("/");
+			
+		} else if (!isFechaValida(startDate) || !isFechaValida(endDate)){
+			System.out.println("Formato de fecha no válido: dd/mm/yyyy. Introducido: "+startDate +"-"+endDate);
 			resp.sendRedirect("/");
 			
 		}else {
@@ -56,6 +64,17 @@ public class AddFactura extends HttpServlet {
 			return "";
 		}
 		return s;
+	}
+	
+	public static boolean isFechaValida(String fecha) {
+		try {
+			SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+			formatoFecha.setLenient(false);
+			formatoFecha.parse(fecha);
+		} catch (ParseException e) {
+			return false;
+		}
+		return true;
 	}
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
