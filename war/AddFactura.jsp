@@ -25,7 +25,12 @@
 			<nav id="nav">
 				<ul>
 					<li><a href="/">Inicio</a></li>
-					<li><a href="/addFactura">Añadir factura</a></li>
+					<li><a href="/addFactura">Añadir factura</a>
+						<ul class="dropdown">
+                      		<li><a href="/addFactura">Manualmente</a></li>
+                       		<li><a href="#">Escanear PDF</a></li>
+                    	</ul>
+                    </li>
 					<li><a href="/showFactura">Mostrar facturas</a></li>
 					<li><a href="#">Apuntarse a compra colectiva</a></li>
 					<li><a class="button special" href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
@@ -41,12 +46,6 @@
                     <form method="post" action="/addFactura">
                             <fieldset id="factura_nueva">
                                     <h2>Datos Factura</h2>
-                                    <p><span><label for="name">Nombre
-                                        <input type="text" name="name" id="name" minlength="3" maxlength="20" required placeholder="Introduzca su nombre">
-                                    </label></span>
-                                    <span><label for="surname">Apellidos
-                                        <input type="text" name="surname" id="surname" required placeholder="Introduzca sus apellidos">
-                                    </label></span></p>
                                     <p><label for="municipio">Municipio
                                         <input type="text" name="municipio" id="municipio" required placeholder="Municipio">
                                     </label></p>
@@ -96,6 +95,7 @@
                                             <option value="Tarragona">Tarragona</option>
                                             <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
                                             <option value="Teruel">Teruel</option>
+                                            <option value="Toledo">Toledo</option>
                                             <option value="Valencia">Valencia</option>
                                             <option value="Valladolid">Valladolid</option>
                                             <option value="Vizcaya">Vizcaya</option>
@@ -119,26 +119,33 @@
                                         <input type="date" name="end_date" id="end_date" required placeholder="dd/mm/aaaa">
                                     </span></p>
                                 </label>
-                            </fieldset>
-
-                            <fieldset id="tipo factura">
-                                    <p><label for="tipoFactura">Tipo de factura
-                                        <select type="text" name="tipoFactura" id="tipoFactura" required>
-                                            <option value="luz">Luz</option>
-                                            <option value="agua">Agua</option>
-                                            <option value="gas">Gas</option>
-                                            <option value="teléfono">Teléfono</option>
-                                        </select>
-                                    </label></p>
-                            </fieldset>
+                            </fieldset>  
 
                             <fieldset id="resumen_factura">
-                                <p><label for="total">Importe
-                                    <input type="text" name="total" id="total" size="35" required placeholder="Introduzca el importe total"><span>€</span>
+                            	<p><label for="cuotas">Cuotas
+                                    <input type="text" name="cuotas" id="cuotas" size="35" required placeholder="Introduzca el importe de cuotas">
+                                </label></p>
+                                <p><label for="consumos">Consumos
+                                    <input type="text" name="consumos" id="consumos" size="35" required placeholder="Introduzca el importe de consumos">
+                                </label></p>
+                                <p><label for="sinImpuestos">Importe total antes de impuestos
+                                    <input type="text" name="sinImpuestos" id="sinImpuestos" size="35" required placeholder="Introduzca el importe total antes de impuestos">
+                                </label></p>
+                                <p><label for="total">Importe total a pagar
+                                    <input type="text" name="total" id="total" size="35" required placeholder="Introduzca el importe total">
                                 </label></p>
                             </fieldset>
+                            
+                            <fieldset id="datos_tarifa">
+                            	<p><label for="datos">Datos contratados
+                            		<input type="text" name="datos" id="datos" required placeholder="Introduzca los datos contratados (GB)">
+                            	</label></p>
+                            	<p><label for="minutos">Minutos contratados
+                            		<input type="text" name="minutos" id="minutos" required placeholder="Introduzca los minutos contratados">
+                            	</label></p>
+                            </fieldset>
 
-                            <p><input type="submit" value="Enviar"><input type="reset"></p>
+                            <p><input type="submit" value="Añadir"><input type="reset"></p>
                         </fieldset>
 
                     </form>

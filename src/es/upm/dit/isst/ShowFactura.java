@@ -44,5 +44,24 @@ public class ShowFactura extends HttpServlet {
 			}
 		}
 	}
-
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws IOException {
+		
+		UserService userService = UserServiceFactory.getUserService();
+		User user = userService.getCurrentUser();
+		
+		Long id = Long.parseLong(req.getParameter("id_factura"));
+		
+		if (user == null) {
+			System.out.println("Usuario no logeado");
+			resp.sendRedirect("/");
+			
+		}else {
+			FacturasDAO dao = FacturasDAOImpl.getInstance();
+			dao.delete(id);
+			resp.sendRedirect("/showFactura");
+		}
+	}
+	
 }

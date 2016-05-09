@@ -25,7 +25,12 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="/">Inicio</a></li>
-							<li><a href="/addFactura">Añadir factura</a></li>
+							<li><a href="/addFactura">Añadir factura</a>
+								<ul class="dropdown">
+                      				<li><a href="/addFactura">Manualmente</a></li>
+                       				<li><a href="#">Escanear PDF</a></li>
+                    			</ul>
+                    		</li>
 							<li><a href="/showFactura">Mostrar facturas</a></li>
 							<li><a href="#">Apuntarse a compra colectiva</a></li>
 							<li><a class="button special" href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>

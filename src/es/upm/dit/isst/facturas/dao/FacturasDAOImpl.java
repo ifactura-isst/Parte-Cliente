@@ -23,10 +23,14 @@ public class FacturasDAOImpl implements FacturasDAO {
 	}
 
 	@Override
-	public Factura add(String nombre, String apellidos, String tipo, String empresa, String startDate, String endDate,
-			Double importe, String municipio, String provincia, User user) {
+	public Factura add(String empresa, String startDate, String endDate, Double cuotas, 
+			Double consumos, Double sinImpuestos, Double importeTotal, Double datosContratados, 
+			Double minutosContratados, String municipio, String provincia, User user) {
+		
 		EntityManager em = EMFService.get().createEntityManager();
-		Factura factura = new Factura(nombre, apellidos, tipo, empresa, startDate, endDate, importe, municipio, provincia, user);
+		Factura factura = new Factura(empresa, startDate, endDate, cuotas, consumos, 
+				sinImpuestos, importeTotal, datosContratados, minutosContratados, municipio, 
+				provincia, user);
 		em.persist(factura);
 		em.close();
 		return factura;
@@ -40,6 +44,18 @@ public class FacturasDAOImpl implements FacturasDAO {
 		List<Factura> facturas = q.getResultList();
 		em.close();
 		return facturas;
+	}
+	
+	@Override
+	public void delete(Long id){
+		EntityManager em = EMFService.get().createEntityManager();
+		try {
+			Factura todo = em.find(Factura.class, id);
+			em.remove(todo);
+		} finally {
+			em.close();
+		}
+		
 	}
 
 }
