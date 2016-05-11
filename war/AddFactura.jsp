@@ -1,188 +1,214 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>iFactura consumidor</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Page Description">
+    <meta name="author" content="alvaro">
+    <title>iFactura-Consumidor</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- My CSS -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body class="landing">
-<div id="page-wrapper">
+<body>
 
-    <!-- Header -->
-	<header id="header">
-		<h1 id="logo"><a href="/">iFactura consumidor</a></h1>
-			<nav id="nav">
-				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/addFactura">Añadir factura</a>
-						<ul class="dropdown">
-                      		<li><a href="/addFactura">Manualmente</a></li>
-                       		<li><a href="#">Escanear PDF</a></li>
-                    	</ul>
-                    </li>
-					<li><a href="/showFactura">Mostrar facturas</a></li>
-					<li><a href="#">Apuntarse a compra colectiva</a></li>
-					<li><a class="button special" href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
-					<li><c:if test="${not empty user}"><c:out value="${user.nickname}"/></c:if></li>
-				</ul>
-			</nav>
-	</header>
-    <div id="main" class="wrapper style1">
-        <div class="container">
-            <!-- Banner -->
-            <section id="banner">
-                <div class="content menu-ancho text-center">
-                    <form method="post" action="/addFactura">
-                            <fieldset id="factura_nueva">
-                                    <h2>Datos Factura</h2>
-                                    <p><label for="municipio">Municipio
-                                        <input type="text" name="municipio" id="municipio" required placeholder="Municipio">
-                                    </label></p>
-                                    <p><label for="provincia">Provincia
-                                        <select type="text "name="provincia" id="provincia" required>
-                                            <option value="Álava">Álava</option>
-                                            <option value="Albacete">Albacete</option>
-                                            <option value="Alicante">Alicante</option>
-                                            <option value="Almería">Almería</option>
-                                            <option value="Asturias">Asturias</option>
-                                            <option value="Ávila">Ávila</option>
-                                            <option value="Badajoz">Badajoz</option>
-                                            <option value="Barcelona">Barcelona</option>
-                                            <option value="Burgos">Burgos</option>
-                                            <option value="Cáceres">Cáceres</option>
-                                            <option value="Cádiz">Cádiz</option>
-                                            <option value="Cantabria">Cantabria</option>
-                                            <option value="Castellón">Castellón</option>
-                                            <option value="Ciudad Real">Ciudad Real</option>
-                                            <option value="Córdoba">Córdoba</option>
-                                            <option value="La Coruña">La Coruña</option>
-                                            <option value="Cuenca">Cuenca</option>
-                                            <option value="Gerona">Gerona</option>
-                                            <option value="Granada">Granada</option>
-                                            <option value="Guadalajara">Guadalajara</option>
-                                            <option value="Guipúzcoa">Guipúzcoa</option>
-                                            <option value="Huelva">Huelva</option>
-                                            <option value="Huesca">Huesca</option>
-                                            <option value="Islas Baleares">Islas Baleares</option>
-                                            <option value="Jaén">Jaén</option>
-                                            <option value="León">León</option>
-                                            <option value="Lérida">Lérida</option>
-                                            <option value="Lugo">Lugo</option>
-                                            <option value="Madrid">Madrid</option>
-                                            <option value="Málaga">Málaga</option>
-                                            <option value="Murcia">Murcia</option>
-                                            <option value="Navarra">Navarra</option>
-                                            <option value="Orense">Orense</option>
-                                            <option value="Palencia">Palencia</option>
-                                            <option value="Las Palmas">Las Palmas</option>
-                                            <option value="Pontevedra">Pontevedra</option>
-                                            <option value="La Rioja">La Rioja</option>
-                                            <option value="Salamanca">Salamanca</option>
-                                            <option value="Segovia">Segovia</option>
-                                            <option value="Sevilla">Sevilla</option>
-                                            <option value="Soria">Soria</option>
-                                            <option value="Tarragona">Tarragona</option>
-                                            <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
-                                            <option value="Teruel">Teruel</option>
-                                            <option value="Toledo">Toledo</option>
-                                            <option value="Valencia">Valencia</option>
-                                            <option value="Valladolid">Valladolid</option>
-                                            <option value="Vizcaya">Vizcaya</option>
-                                            <option value="Zamora">Zamora</option>
-                                            <option value="Zaragoza">Zaragoza</option>
-                                            <option value="Ceuta">Ceuta</option>
-                                            <option value="Melilla">Melilla</option>
-                                        </select>
-                                    </label></p>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">iFactura-Consumidor</a>
+        </div>
 
-                                <p><label for="empresa">Empresa proveedora
-                                    <input type="text" name="empresa" id="empresa" required placeholder="Empresa proveedora">
-                                </label></p>
-
-                            <fieldset id="datos_factura">
-                                <label for="start_date">Periodo de facturación
-                                    <p><span>De:
-                                        <input type="date" name="start_date" id="start_date" required placeholder="dd/mm/aaaa">
-                                    </span>
-                                    <span>Hasta:
-                                        <input type="date" name="end_date" id="end_date" required placeholder="dd/mm/aaaa">
-                                    </span></p>
-                                </label>
-                            </fieldset>  
-
-                            <fieldset id="resumen_factura">
-                            	<p><label for="cuotas">Cuotas
-                                    <input type="text" name="cuotas" id="cuotas" size="35" required placeholder="Introduzca el importe de cuotas">
-                                </label></p>
-                                <p><label for="consumos">Consumos
-                                    <input type="text" name="consumos" id="consumos" size="35" required placeholder="Introduzca el importe de consumos">
-                                </label></p>
-                                <p><label for="sinImpuestos">Importe total antes de impuestos
-                                    <input type="text" name="sinImpuestos" id="sinImpuestos" size="35" required placeholder="Introduzca el importe total antes de impuestos">
-                                </label></p>
-                                <p><label for="total">Importe total a pagar
-                                    <input type="text" name="total" id="total" size="35" required placeholder="Introduzca el importe total">
-                                </label></p>
-                            </fieldset>
-                            
-                            <fieldset id="datos_tarifa">
-                            	<p><label for="datos">Datos contratados
-                            		<input type="text" name="datos" id="datos" required placeholder="Introduzca los datos contratados (GB)">
-                            	</label></p>
-                            	<p><label for="minutos">Minutos contratados
-                            		<input type="text" name="minutos" id="minutos" required placeholder="Introduzca los minutos contratados">
-                            	</label></p>
-                            </fieldset>
-
-                            <p><input type="submit" value="Añadir"><input type="reset"></p>
-                        </fieldset>
-
-                    </form>
-
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Inicio <span class="sr-only">(current)</span></a></li>
+                <li class="dropdown active">
+                    <a href="/addFactura" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-expanded="false">Añadir factura <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/addFactura">Manualmente</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Escanear PDF</a></li>
+                    </ul>
+                </li>
+                <li><a href="/showFactura">Mostrar factura</a></li>
+                <li><a href="#">Apuntarse a compra colectiva</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Buscar..." type="text">
                 </div>
-
-            </section>
+            </form>
+            <ul class="nav navbar-nav navbar-right btn-primary active">
+                <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
+                <li><c:if test="${not empty user}"><c:out value="${user.nickname}"/></c:if></li>
+            </ul>
         </div>
     </div>
-    <!-- Footer -->
-    <footer id="footer">
-        <p>
-            <a href="/">
-                iFactura
-            </a>
-        </p>
-        <p>
-            <a href="http://www.etsit.upm.es">
-                ETSI Telecomunicación @ 2015
-            </a>
-            <a href="http://www.upm.es">
-                Universidad Politécnica de Madrid
-            </a>
-        </p>
-    </footer>
+</nav>
 
+<div class="container">
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Introduce los datos de tu factura</legend>
+            <div class="form-group">
+                <label for="municipio" class="col-lg-2 control-label">Municipio</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="municipio" placeholder="Municipio" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="provincia" class="col-lg-2 control-label">Provincia</label>
+                <div class="col-lg-10">
+                    <select class="form-control" id="provincia" placeholder="Provincia" type="text" required>
+                        <option value="Álava">Álava</option>
+                        <option value="Albacete">Albacete</option>
+                        <option value="Alicante">Alicante</option>
+                        <option value="Almería">Almería</option>
+                        <option value="Asturias">Asturias</option>
+                        <option value="Ávila">Ávila</option>
+                        <option value="Badajoz">Badajoz</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Burgos">Burgos</option>
+                        <option value="Cáceres">Cáceres</option>
+                        <option value="Cádiz">Cádiz</option>
+                        <option value="Cantabria">Cantabria</option>
+                        <option value="Castellón">Castellón</option>
+                        <option value="Ciudad Real">Ciudad Real</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="La Coruña">La Coruña</option>
+                        <option value="Cuenca">Cuenca</option>
+                        <option value="Gerona">Gerona</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Guadalajara">Guadalajara</option>
+                        <option value="Guipúzcoa">Guipúzcoa</option>
+                        <option value="Huelva">Huelva</option>
+                        <option value="Huesca">Huesca</option>
+                        <option value="Islas Baleares">Islas Baleares</option>
+                        <option value="Jaén">Jaén</option>
+                        <option value="León">León</option>
+                        <option value="Lérida">Lérida</option>
+                        <option value="Lugo">Lugo</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Málaga">Málaga</option>
+                        <option value="Murcia">Murcia</option>
+                        <option value="Navarra">Navarra</option>
+                        <option value="Orense">Orense</option>
+                        <option value="Palencia">Palencia</option>
+                        <option value="Las Palmas">Las Palmas</option>
+                        <option value="Pontevedra">Pontevedra</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Salamanca">Salamanca</option>
+                        <option value="Segovia">Segovia</option>
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Soria">Soria</option>
+                        <option value="Tarragona">Tarragona</option>
+                        <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                        <option value="Teruel">Teruel</option>
+                        <option value="Toledo">Toledo</option>
+                        <option value="Valencia">Valencia</option>
+                        <option value="Valladolid">Valladolid</option>
+                        <option value="Vizcaya">Vizcaya</option>
+                        <option value="Zamora">Zamora</option>
+                        <option value="Zaragoza">Zaragoza</option>
+                        <option value="Ceuta">Ceuta</option>
+                        <option value="Melilla">Melilla</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="empresa" class="col-lg-2 control-label">Empresa proveedora</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="empresa" placeholder="Empresa telefónica" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="start_date" class="col-lg-2 control-label">Periodo de facturación</label>
+                <div class="col-lg-10">
+                    <span>De:
+                        <input class="form-control" id="start_date" placeholder="dd/mm/aaaa" type="text" required>
+                    </span>
+                    <span>Hasta:
+                        <input class="form-control" id="end_date" placeholder="dd/mm/aaaa" type="text" required>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cuotas" class="col-lg-2 control-label">Cuotas</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="cuotas" placeholder="Introduzca el importe de cuotas" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="consumos" class="col-lg-2 control-label">Consumos</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="consumos" placeholder="Introduzca el importe de consumos" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sinImpuestos" class="col-lg-2 control-label">Importe total antes de impuestos</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="sinImpuestos" placeholder="Introduzca el importe total antes de impuestos" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="total" class="col-lg-2 control-label">Importe total a pagar</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="total" placeholder="Introduzca el importe total" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="datos" class="col-lg-2 control-label">Datos contratados</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="datos" placeholder="Introduzca los datos contratados (GB)" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="minutos" class="col-lg-2 control-label">Minutos contratados</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="minutos" placeholder="Introduzca los minutos contratados" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Añadir</button>
+                    <button type="reset" class="btn btn-default">Cancelar</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
 </div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets/js/main.js"></script>
+<div class="panel-footer">
+    <p><a href="/">iFactura</a></p>
+    <p>
+        <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2015</a>
+        <a href="http://www.upm.es">Universidad Politécnica de Madrid</a>
+    </p>
+</div>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
