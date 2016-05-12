@@ -14,9 +14,9 @@ import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
-import es.upm.dit.isst.facturas.dao.FacturasDAO;
-import es.upm.dit.isst.facturas.dao.FacturasDAOImpl;
-import es.upm.dit.isst.facturas.model.Factura;
+import es.upm.dit.isst.dao.FacturasDAO;
+import es.upm.dit.isst.dao.FacturasDAOImpl;
+import es.upm.dit.isst.model.Factura;
 
 public class ShowFactura extends HttpServlet {
 	

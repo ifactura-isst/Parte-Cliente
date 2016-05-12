@@ -47,11 +47,11 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/addFactura">Manualmente</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Escanear PDF</a></li>
+                        <li><a href="/addFacturaPDF">Escanear PDF</a></li>
                     </ul>
                 </li>
                 <li><a href="/showFactura">Mostrar factura</a></li>
-                <li><a href="#">Apuntarse a compra colectiva</a></li>
+                <li><a href="/comprasColectivas">Apuntarse a compra colectiva</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -67,19 +67,19 @@
 </nav>
 
 <div class="container">
-    <form class="form-horizontal">
+    <form class="form-horizontal" method="post" action="/addFactura">
         <fieldset>
             <legend>Introduce los datos de tu factura</legend>
             <div class="form-group">
                 <label for="municipio" class="col-lg-2 control-label">Municipio</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="municipio" placeholder="Municipio" type="text" required>
+                    <input class="form-control" id="municipio" name="municipio" placeholder="Municipio" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="provincia" class="col-lg-2 control-label">Provincia</label>
                 <div class="col-lg-10">
-                    <select class="form-control" id="provincia" placeholder="Provincia" type="text" required>
+                    <select class="form-control" id="provincia" name="provincia" placeholder="Provincia" type="text" required>
                         <option value="Álava">Álava</option>
                         <option value="Albacete">Albacete</option>
                         <option value="Alicante">Alicante</option>
@@ -138,54 +138,54 @@
             <div class="form-group">
                 <label for="empresa" class="col-lg-2 control-label">Empresa proveedora</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="empresa" placeholder="Empresa telefónica" type="text" required>
+                    <input class="form-control" id="empresa" name="empresa" placeholder="Empresa telefónica" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="start_date" class="col-lg-2 control-label">Periodo de facturación</label>
                 <div class="col-lg-10">
                     <span>De:
-                        <input class="form-control" id="start_date" placeholder="dd/mm/aaaa" type="text" required>
+                        <input class="form-control" id="start_date" name="start_date" placeholder="dd/mm/aaaa" type="text" required>
                     </span>
                     <span>Hasta:
-                        <input class="form-control" id="end_date" placeholder="dd/mm/aaaa" type="text" required>
+                        <input class="form-control" id="end_date" name="end_date" placeholder="dd/mm/aaaa" type="text" required>
                     </span>
                 </div>
             </div>
             <div class="form-group">
                 <label for="cuotas" class="col-lg-2 control-label">Cuotas</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="cuotas" placeholder="Introduzca el importe de cuotas" type="text" required>
+                    <input class="form-control" id="cuotas" name="cuotas" placeholder="Introduzca el importe de cuotas" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="consumos" class="col-lg-2 control-label">Consumos</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="consumos" placeholder="Introduzca el importe de consumos" type="text" required>
+                    <input class="form-control" id="consumos" name="consumos" placeholder="Introduzca el importe de consumos" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="sinImpuestos" class="col-lg-2 control-label">Importe total antes de impuestos</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="sinImpuestos" placeholder="Introduzca el importe total antes de impuestos" type="text" required>
+                    <input class="form-control" id="sinImpuestos" name="sinImpuestos" placeholder="Introduzca el importe total antes de impuestos" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="total" class="col-lg-2 control-label">Importe total a pagar</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="total" placeholder="Introduzca el importe total" type="text" required>
+                    <input class="form-control" id="total" name="total" placeholder="Introduzca el importe total" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="datos" class="col-lg-2 control-label">Datos contratados</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="datos" placeholder="Introduzca los datos contratados (GB)" type="text" required>
+                    <input class="form-control" id="datos" name="datos" placeholder="Introduzca los datos contratados (GB)" type="text" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="minutos" class="col-lg-2 control-label">Minutos contratados</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="minutos" placeholder="Introduzca los minutos contratados" type="text" required>
+                    <input class="form-control" id="minutos" name="minutos" placeholder="Introduzca los minutos contratados" type="text" required>
                 </div>
             </div>
             <div class="form-group">
@@ -198,10 +198,10 @@
     </form>
 </div>
 
-<div class="panel-footer">
+<div id="footer" class="panel-footer">
     <p><a href="/">iFactura</a></p>
     <p>
-        <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2015</a>
+        <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2016</a>
         <a href="http://www.upm.es">Universidad Politécnica de Madrid</a>
     </p>
 </div>

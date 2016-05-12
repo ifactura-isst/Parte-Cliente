@@ -1,11 +1,12 @@
-package es.upm.dit.isst.facturas.dao;
+package es.upm.dit.isst.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import com.google.appengine.api.users.User;
-import es.upm.dit.isst.facturas.model.Factura;
+
+import es.upm.dit.isst.model.Factura;
 
 
 public class FacturasDAOImpl implements FacturasDAO {

@@ -21,12 +21,28 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/addFactura</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>AddFacturaPDF</servlet-name>
+		<servlet-class>es.upm.dit.isst.AddFacturaPDF</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddFacturaPDF</servlet-name>
+		<url-pattern>/addFacturaPDF</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>ShowFactura</servlet-name>
 		<servlet-class>es.upm.dit.isst.ShowFactura</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ShowFactura</servlet-name>
 		<url-pattern>/showFactura</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ComprasColectivas</servlet-name>
+		<servlet-class>es.upm.dit.isst.ComprasColectivas</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ComprasColectivas</servlet-name>
+		<url-pattern>/comprasColectivas</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>Main</welcome-file>

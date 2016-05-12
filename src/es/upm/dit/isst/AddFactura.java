@@ -14,7 +14,10 @@ import javax.swing.JOptionPane;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
-import es.upm.dit.isst.facturas.dao.*;
+
+import es.upm.dit.isst.dao.FacturasDAO;
+import es.upm.dit.isst.dao.FacturasDAOImpl;
+import es.upm.dit.isst.dao.*;
 
 public class AddFactura extends HttpServlet {
 	

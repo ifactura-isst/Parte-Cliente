@@ -9,7 +9,7 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="Page Description">
         <meta name="author" content="alvaro">
-        <title>Page Title</title>
+        <title>iFactura-Consumidor</title>
 
         <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -45,11 +45,11 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/addFactura">Manualmente</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Escanear PDF</a></li>
+                            <li><a href="/addFacturaPDF">Escanear PDF</a></li>
                         </ul>
                     </li>
                     <li><a href="/showFactura">Mostrar factura</a></li>
-                    <li><a href="#">Apuntarse a compra colectiva</a></li>
+                    <li><a href="/comprasColectivas">Apuntarse a compra colectiva</a></li>
                 </ul>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -75,10 +75,10 @@
         </div>
     </div>
 
-    <div class="panel-footer">
+    <div id="footer" class="panel-footer">
         <p><a href="/">iFactura</a></p>
         <p>
-            <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2015</a>
+            <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2016</a>
             <a href="http://www.upm.es">Universidad Politécnica de Madrid</a>
         </p>
     </div>

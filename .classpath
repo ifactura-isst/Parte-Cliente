@@ -7,6 +7,8 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/alvaro/Dropbox/Alvaro/Universidad/4º/2º Cuatrimestre/ISST/Proyecto/pdfbox-app-1.8.12.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/itextpdf-5.5.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/itextpdf-5.5.9-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/itextpdf-5.5.9.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

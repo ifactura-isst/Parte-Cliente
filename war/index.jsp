@@ -64,10 +64,10 @@
     </div>
 </div>
 
-<div class="panel-footer">
+<div id="footer" class="panel-footer">
     <p><a href="/">iFactura</a></p>
     <p>
-        <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2015</a>
+        <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2016</a>
         <a href="http://www.upm.es">Universidad Politécnica de Madrid</a>
     </p>
 </div>

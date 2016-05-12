@@ -1,4 +1,4 @@
-package es.upm.dit.isst.facturas.dao;
+package es.upm.dit.isst.dao;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

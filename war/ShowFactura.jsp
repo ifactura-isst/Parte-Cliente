@@ -45,11 +45,11 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/addFactura">Manualmente</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Escanear PDF</a></li>
+                            <li><a href="/addFacturaPDF">Escanear PDF</a></li>
                         </ul>
                     </li>
                     <li class="active"><a href="/showFactura">Mostrar factura</a></li>
-                    <li><a href="#">Apuntarse a compra colectiva</a></li>
+                    <li><a href="/comprasColectivas">Apuntarse a compra colectiva</a></li>
                 </ul>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -96,7 +96,7 @@
                                 <td><c:out value="${facturasi.minutosContratados}min" /></td>
                                 <input id="id_factura" name="id_factura" type="hidden" value="${facturasi.id}" />
 
-                                <td><input class="btn btn-info" type="submit" value="Borrar"></td>
+                                <td><button class="btn btn-info" type="submit">Borrar</button></td>
                             </form>
                         </tr>
                     </c:forEach>
@@ -104,10 +104,10 @@
             </table>
     </div>
 	
-    <div class="footer panel-footer">
+    <div id="footer" class="footer panel-footer">
         <p><a href="/">iFactura</a></p>
         <p>
-            <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2015</a>
+            <a href="http://www.etsit.upm.es">ETSI Telecomunicación @ 2016</a>
             <a href="http://www.upm.es">Universidad Politécnica de Madrid</a>
         </p>
     </div>
