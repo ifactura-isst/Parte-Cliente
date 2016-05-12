@@ -41,14 +41,14 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Inicio <span class="sr-only">(current)</span></a></li>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <ul class="nav navbar-nav navbar-right btn-primary active">
+                <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
                     <input class="form-control" placeholder="Buscar..." type="text">
                 </div>
             </form>
-            <ul class="nav navbar-nav navbar-right btn-primary active">
-                <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
-            </ul>
         </div>
     </div>
 </nav>
