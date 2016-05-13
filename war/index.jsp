@@ -34,12 +34,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">iFactura-Consumidor</a>
+            <a class="navbar-brand" href="/">Consumidor<img class="logo" src="images/factura.jpg" alt="iFactura" /></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Inicio <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio <span class="sr-only">(current)</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right btn-primary active">
                 <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>

@@ -34,22 +34,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">iFactura-Consumidor</a>
+                <a class="navbar-brand" href="/">Consumidor<img class="logo" src="images/factura.jpg" alt="iFactura" /></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
-                        <a href="/addFactura" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Añadir factura <span class="caret"></span></a>
+                        <a href="/addFactura" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                        aria-expanded="false"><span class="glyphicon glyphicon-folder-open"></span> Añadir factura <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/addFactura">Manualmente</a></li>
                             <li class="divider"></li>
                             <li><a href="/addFacturaPDF">Escanear PDF</a></li>
                         </ul>
                     </li>
-                    <li class="active"><a href="/showFactura">Mostrar factura</a></li>
-                    <li><a href="/comprasColectivas">Apuntarse a compra colectiva</a></li>
+                    <li class="active"><a href="/showFactura"><span class="glyphicon glyphicon-eye-open"></span> Mostrar factura</a></li>
+                    <li><a href="/comprasColectivas"><span class="glyphicon glyphicon-ok"></span> Apuntarse a compra colectiva</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right btn-primary active">
                 <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
