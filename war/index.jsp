@@ -42,7 +42,7 @@
                 <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio <span class="sr-only">(current)</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right btn-primary active">
-                <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
+                <li><a href="<c:url value="${url}"/>"><span class="glyphicon glyphicon-log-in"></span> <c:out value="${urlLinktext}"/></a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">

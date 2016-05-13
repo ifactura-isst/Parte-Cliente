@@ -53,7 +53,7 @@
                     <li><a href="/comprasColectivas"><span class="glyphicon glyphicon-ok"></span> Apuntarse a compra colectiva</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right btn-primary active">
-                <li><a href="<c:url value="${url}"/>"><c:out value="${urlLinktext}"/></a></li>
+                <li><a href="<c:url value="${url}"/>"><span class="glyphicon glyphicon-log-in"></span> <c:out value="${urlLinktext}"/></a></li>
             	</ul>
             	<form class="navbar-form navbar-right" role="search">
                	<div class="form-group">
@@ -96,7 +96,7 @@
                                 <td><c:out value="${facturasi.minutosContratados}min" /></td>
                                 <input id="id_factura" name="id_factura" type="hidden" value="${facturasi.id}" />
 
-                                <td><button class="btn btn-info" type="submit">Borrar</button></td>
+                                <td><button class="btn btn-info" type="submit">Borrar <span class="glyphicon glyphicon-remove"></span></button></td>
                             </form>
                         </tr>
                     </c:forEach>
