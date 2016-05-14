@@ -72,10 +72,10 @@
                         <th>Periodo de facturación</th>
                         <th>Municipio</th>
                         <th>Provincia</th>
-                        <th>Cuotas</th>
-                        <th>Consumos</th>
+                        <th>Tarifa</th>
+                        <th>Consumo extra</th>
                         <th>Importe antes de impuestos</th>
-                        <th>Importe total a pagar</th>
+                        <th>Importe total</th>
                         <th>Datos contratados</th>
                         <th>Minutos contratados</th>
             		</tr>
