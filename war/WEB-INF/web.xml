@@ -44,6 +44,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>ComprasColectivas</servlet-name>
 		<url-pattern>/comprasColectivas</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>ComprasColectivasUncheck</servlet-name>
+		<servlet-class>es.upm.dit.isst.ComprasColectivasUncheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ComprasColectivasUncheck</servlet-name>
+		<url-pattern>/comprasColectivasUncheck</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>Main</welcome-file>
 	</welcome-file-list>
