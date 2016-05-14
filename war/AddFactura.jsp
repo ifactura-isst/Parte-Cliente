@@ -152,27 +152,27 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="cuotas" class="col-lg-2 control-label">Cuotas</label>
+                <label for="cuotas" class="col-lg-2 control-label">Tarifa</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="cuotas" name="cuotas" placeholder="Introduzca el importe de cuotas" type="text" required>
+                    <input class="form-control" id="cuotas" name="cuotas" placeholder="Introduzca el importe de su tarifa" type="text" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="consumos" class="col-lg-2 control-label">Consumos</label>
+                <label for="consumos" class="col-lg-2 control-label">Consumo extra</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="consumos" name="consumos" placeholder="Introduzca el importe de consumos" type="text" required>
+                    <input class="form-control" id="consumos" name="consumos" placeholder="Introduzca el importe de su consumo extra" type="text" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="sinImpuestos" class="col-lg-2 control-label">Importe total antes de impuestos</label>
+                <label for="sinImpuestos" class="col-lg-2 control-label">Importe antes de impuestos</label>
                 <div class="col-lg-10">
                     <input class="form-control" id="sinImpuestos" name="sinImpuestos" placeholder="Introduzca el importe total antes de impuestos" type="text" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="total" class="col-lg-2 control-label">Importe total a pagar</label>
+                <label for="total" class="col-lg-2 control-label">Importe total</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="total" name="total" placeholder="Introduzca el importe total" type="text" required>
+                    <input class="form-control" id="total" name="total" placeholder="Introduzca el importe total a pagar" type="text" required>
                 </div>
             </div>
             <div class="form-group">
