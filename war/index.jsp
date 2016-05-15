@@ -39,7 +39,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right btn-primary active">
                 <li><a href="<c:url value="${url}"/>"><span class="glyphicon glyphicon-log-in"></span> <c:out value="${urlLinktext}"/></a></li>
