@@ -21,6 +21,7 @@ import es.upm.dit.isst.dao.FacturasDAOImpl;
 import es.upm.dit.isst.model.Factura;
 
 /**
+ * 
  * @author alvaro
  */
 public class FacturasDAOImplTest {

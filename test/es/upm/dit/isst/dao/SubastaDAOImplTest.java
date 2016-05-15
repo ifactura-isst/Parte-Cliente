@@ -21,6 +21,7 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import es.upm.dit.isst.model.Subasta;
 
 /**
+ * 
  * @author alvaro
  */
 public class SubastaDAOImplTest {
