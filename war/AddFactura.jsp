@@ -40,7 +40,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio <span class="sr-only">(current)</span></a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
                 <li class="dropdown active">
                     <a href="/addFactura" class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-expanded="false"><span class="glyphicon glyphicon-folder-open"></span> Añadir factura <span class="caret"></span></a>
