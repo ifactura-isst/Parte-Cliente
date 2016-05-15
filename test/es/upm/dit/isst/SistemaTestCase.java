@@ -27,7 +27,7 @@ public class SistemaTestCase {
     driver.findElement(By.id("Email")).sendKeys("alvaro.glez.mej@gmail.com");
     driver.findElement(By.id("next")).click();
     driver.findElement(By.id("Passwd")).clear();
-    driver.findElement(By.id("Passwd")).sendKeys("xxxxxxxx");
+    driver.findElement(By.id("Passwd")).sendKeys("xxxxxxxxx");
     driver.findElement(By.id("signIn")).click();
     assertEquals("iFactura-Consumidor", driver.getTitle());
     driver.findElement(By.linkText("Añadir factura")).click();
