@@ -22,7 +22,7 @@ public class SistemaTestCase {
   @Test
   public void testPruebaFinalSistema() throws Exception {
     driver.get(baseUrl + "/");
-    driver.findElement(By.linkText("Login")).click();
+    driver.findElement(By.linkText("Logn")).click();
     driver.findElement(By.id("Email")).clear();
     driver.findElement(By.id("Email")).sendKeys("alvaro.glez.mej@gmail.com");
     driver.findElement(By.id("next")).click();

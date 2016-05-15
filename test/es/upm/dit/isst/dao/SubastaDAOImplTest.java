@@ -22,7 +22,6 @@ import es.upm.dit.isst.model.Subasta;
 
 /**
  * @author alvaro
- *
  */
 public class SubastaDAOImplTest {
 	
